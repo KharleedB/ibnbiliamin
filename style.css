@@ -13,6 +13,21 @@ body {
   padding-bottom: 40px;
   animation: fadeIn 1.5s ease-in;
 }
+/* Fix buttons overlapping on small screens */
+@media (max-width: 600px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btn,
+  .btn-outline {
+    width: 80%; /* Makes buttons wider and centered */
+    text-align: center;
+  }
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
